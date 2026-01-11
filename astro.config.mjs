@@ -4,23 +4,29 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://mc.fabianadrian.fi',
 	integrations: [
 		starlight({
 			title: 'FabiCraft',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/fabianmakila/mc.fabianadrian.fi' }],
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+			logo: {
+			  src: './src/assets/logo.png'
+			},
+			social: [
+			  { icon: 'discord', label: 'Discord', href: 'https://discord.gg/TJyAWjztUD' },
+			  { icon: 'github', label: 'GitHub', href: 'https://github.com/fabianmakila/mc.fabianadrian.fi' }
 			],
+			sidebar: [
+			  { slug: 'rules' },
+				{ slug: 'how-to-join' },
+				{
+					label: 'Survival',
+					autogenerate: { directory: 'survival' }
+				}
+			],
+			customCss: [
+        // Relative path to your custom CSS file
+        './src/styles/custom.css',
+      ],
 		}),
 	],
 });
