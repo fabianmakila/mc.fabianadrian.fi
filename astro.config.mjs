@@ -13,7 +13,7 @@ export default defineConfig({
 			},
 			social: [
 			  { icon: 'discord', label: 'Discord', href: 'https://discord.gg/TJyAWjztUD' },
-			  { icon: 'github', label: 'GitHub', href: 'https://github.com/fabianmakila/mc.fabianadrian.fi' }
+			  { icon: 'github', label: 'GitHub', href: 'https://github.com/fabicraft-net' }
 			],
 			sidebar: [
 			  { slug: 'rules' },
